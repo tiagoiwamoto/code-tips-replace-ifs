@@ -21,7 +21,7 @@ public class MainRefactored {
 
         IdentificationEnum identificationEnum =
                 Arrays.stream(IdentificationEnum.values())
-                        .filter(id -> id.name().equals(value)).findFirst().orElseThrow(RuntimeException::new);
+                        .filter(id -> id.name().equals(value)).findFirst().orElseThrow(NullPointerException::new);
 
         System.out.println("Informe o ".concat(identificationEnum.name()).concat(": "));
         String document = scanner.nextLine();
